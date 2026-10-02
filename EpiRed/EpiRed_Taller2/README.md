@@ -1,6 +1,6 @@
 # EpiRed · Taller 2 de caminos mínimos
 
-Una implementación en **un solo archivo Python**, basada en la red del Taller 1. Esta guía sirve para estudiar y exponer: primero la teoría, después el código por bloques.
+
 
 ## 1. Qué entregar y cómo ejecutarlo
 

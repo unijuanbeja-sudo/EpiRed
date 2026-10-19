@@ -1,0 +1,50 @@
+EPIRED | PARCIAL CORTE 2
+FICHA DE DOMINIO
+Vértice: municipio del sistema EpiRed (10 municipios).
+Arista: conexión de traslado bidireccional (13 conexiones).
+Peso principal: tiempo ficticio en minutos, separado de la capacidad.
+Capacidad: unidades de suministros médicos por viaje.
+Reto 4: costos económicos dirigidos en unidades monetarias ficticias (UM).
+Reportes epidemiológicos: datos anteriores, sin ponderar rutas.
+Datos académicos ficticios; no son una red hospitalaria real ni recomendaciones sanitarias.
+
+RETO 1 | Mayor capacidad
+A (Medellín) -> D (Envigado) -> E (Sabaneta) -> F (Caldas)
+Cuello de botella: 55 unidades de suministros por viaje.
+Menor tiempo: A (Medellín) -> C (Itagüí) -> F (Caldas)
+Costo mínimo: 50 minutos.
+
+RETO 2 | Puntos críticos de falla
+Componentes iniciales: [['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']]
+Críticos: G (Copacabana), H (Girardota)
+Sin A: BCDEFGHIJ; crítica: False; nuevos aislados: []
+Sin B: ACDEFGHIJ; crítica: False; nuevos aislados: []
+Sin C: ABDEFGHIJ; crítica: False; nuevos aislados: []
+Sin D: ABCEFGHIJ; crítica: False; nuevos aislados: []
+Sin E: ABCDFGHIJ; crítica: False; nuevos aislados: []
+Sin F: ABCDEGHIJ; crítica: False; nuevos aislados: []
+Sin G: ABCDEF | HI | J; crítica: True; nuevos aislados: ['J']
+Sin H: ABCDEFGJ | I; crítica: True; nuevos aislados: ['I']
+Sin I: ABCDEFGHJ; crítica: False; nuevos aislados: []
+Sin J: ABCDEFGHI; crítica: False; nuevos aislados: []
+
+RETO 3 | Ruta con respaldo
+Primaria: A (Medellín) -> C (Itagüí) -> F (Caldas); 50 minutos
+Respaldo: A (Medellín) -> D (Envigado) -> E (Sabaneta) -> F (Caldas); 62 minutos
+Diferencia porcentual: 24%
+
+RETO 3 | Ruta con respaldo
+Primaria: A (Medellín) -> G (Copacabana) -> H (Girardota) -> I (Barbosa); 70 minutos
+Red no redundante entre origen y destino
+
+RETO 4 | Costos dirigidos y subsidio
+Base: 10 UM por arco. Solo A->B recibe bono; B->A sigue en 10 UM.
+A->B = -5 UM; anomalía: False
+Diagonal final: {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0, 'F': 0, 'G': 0, 'H': 0, 'I': 0, 'J': 0}
+Sin ciclo negativo: una arista negativa sola no basta para producirlo.
+A->B = -35 UM; anomalía: True
+Diagonal final: {'A': -8634710, 'B': -8634735, 'C': -8634850, 'D': -8635530, 'E': -8638230, 'F': -8655570, 'G': -8759860, 'H': -9177000, 'I': -10845540, 'J': -21691080}
+ALERTA: inconsistencia operativa; posible beneficio infinito al repetir un ciclo.
+IDs diagnósticos: A, B, C, D, E, F, G, H, I, J
+Son evidencia de recorridos cerrados negativos; no identifican el ciclo simple exacto.
+Estado original intacto: 10 municipios y 13 conexiones; IDs, tiempos y capacidades iguales.

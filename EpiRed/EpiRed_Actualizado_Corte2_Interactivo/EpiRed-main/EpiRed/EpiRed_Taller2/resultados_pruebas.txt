@@ -1,0 +1,63 @@
+VALIDACION REAL DE EPIRED - PARCIAL CORTE 2
+Python 3.12, biblioteca estándar. Comando desde EpiRed/EpiRed_Taller2:
+python -m unittest discover -s tests -v
+
+test_alerta_exacta_en_consola (test_integracion.TestIntegracion.test_alerta_exacta_en_consola) ... ok
+test_datos_preservados (test_integracion.TestIntegracion.test_datos_preservados) ... ok
+test_demo_completa (test_integracion.TestIntegracion.test_demo_completa) ... ok
+test_desbordamiento_tiene_error_claro (test_integracion.TestIntegracion.test_desbordamiento_tiene_error_claro) ... ok
+test_dijkstra_floyd_100_pares (test_integracion.TestIntegracion.test_dijkstra_floyd_100_pares) ... ok
+test_menu_recupera_errores_y_consulta_todas_las_opciones (test_integracion.TestIntegracion.test_menu_recupera_errores_y_consulta_todas_las_opciones) ... ok
+test_validacion_modelo_y_estado (test_integracion.TestIntegracion.test_validacion_modelo_y_estado) ... ok
+test_capacidades_invalidas_sin_mutacion (test_reto1.TestCapacidad.test_capacidades_invalidas_sin_mutacion) ... ok
+test_desconectado (test_reto1.TestCapacidad.test_desconectado) ... ok
+test_desempate_por_id (test_reto1.TestCapacidad.test_desempate_por_id) ... ok
+test_ejemplo_y_estado (test_reto1.TestCapacidad.test_ejemplo_y_estado) ... ok
+test_ids_invalidos (test_reto1.TestCapacidad.test_ids_invalidos) ... ok
+test_mismo_origen (test_reto1.TestCapacidad.test_mismo_origen) ... ok
+test_oraculo_todas_las_rutas_simples (test_reto1.TestCapacidad.test_oraculo_todas_las_rutas_simples) ... ok
+test_cero_es_arista (test_reto2.TestCriticos.test_cero_es_arista) ... ok
+test_dos_nodos_no_es_critico_pero_si_nuevo_aislado (test_reto2.TestCriticos.test_dos_nodos_no_es_critico_pero_si_nuevo_aislado) ... ok
+test_entradas_invalidas (test_reto2.TestCriticos.test_entradas_invalidas) ... ok
+test_g_h_y_estado (test_reto2.TestCriticos.test_g_h_y_estado) ... ok
+test_previamente_desconectado (test_reto2.TestCriticos.test_previamente_desconectado) ... ok
+test_vacio_unitario_y_aislados (test_reto2.TestCriticos.test_vacio_unitario_y_aislados) ... ok
+test_a_f_costos_porcentaje_y_estado (test_reto3.TestRespaldo.test_a_f_costos_porcentaje_y_estado) ... ok
+test_costo_cero_con_extremos_distintos (test_reto3.TestRespaldo.test_costo_cero_con_extremos_distintos) ... ok
+test_ids_y_red_dirigida (test_reto3.TestRespaldo.test_ids_y_red_dirigida) ... ok
+test_mismo_origen (test_reto3.TestRespaldo.test_mismo_origen) ... ok
+test_respaldo_puede_compartir_vertice_interno (test_reto3.TestRespaldo.test_respaldo_puede_compartir_vertice_interno) ... ok
+test_retirar_solo_aristas_y_ambos_sentidos (test_reto3.TestRespaldo.test_retirar_solo_aristas_y_ambos_sentidos) ... ok
+test_sin_primaria (test_reto3.TestRespaldo.test_sin_primaria) ... ok
+test_sin_respaldo_y_estado (test_reto3.TestRespaldo.test_sin_respaldo_y_estado) ... ok
+test_todos_los_pares_sin_aristas_compartidas_y_estado (test_reto3.TestRespaldo.test_todos_los_pares_sin_aristas_compartidas_y_estado) ... ok
+test_ciclo_desconectado (test_reto4.TestCiclos.test_ciclo_desconectado) ... ok
+test_con_ciclo_y_matriz_intacta (test_reto4.TestCiclos.test_con_ciclo_y_matriz_intacta) ... ok
+test_dijkstra_rechaza_negativos (test_reto4.TestCiclos.test_dijkstra_rechaza_negativos) ... ok
+test_ids_personalizados (test_reto4.TestCiclos.test_ids_personalizados) ... ok
+test_matrices_e_ids_invalidos (test_reto4.TestCiclos.test_matrices_e_ids_invalidos) ... ok
+test_negativo_sin_ciclo_y_original_intacto (test_reto4.TestCiclos.test_negativo_sin_ciclo_y_original_intacto) ... ok
+test_vacio_unitario_y_diagonal_negativa (test_reto4.TestCiclos.test_vacio_unitario_y_diagonal_negativa) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 0.023s
+
+OK
+
+Interpretación: 36 pruebas aprobadas, sin errores ni omisiones.
+Cubren los cuatro retos, casos límite, entradas inválidas, desbordamiento,
+rutas disjuntas y conservación exacta del estado.
+La demo main.py --demo terminó correctamente y está en resultados_demo.txt.
+Comprobaciones de preparación adicionales ejecutadas:
+- Importación de epired_taller2 y main sin iniciar el menú.
+- Matriz de tiempos, municipios y conexiones iguales al Taller 2 original.
+- Dijkstra (100 pares) y Floyd equivalentes al código del ZIP original.
+- Los 3 DOCX se abren; contenido idéntico a sus Markdown.
+- Extractos de código del README y guiones coinciden con el código entregado.
+- 27 archivos originales conservados byte por byte.
+- Solo se modificaron 3 archivos existentes: código del Taller 2 y dos README.
+- Taller 1 y versiones de árboles intactos; cachés excluidas del ZIP.
+- Los 3 Word se abrieron realmente en Microsoft Word y se exportaron para revisión.
+- Revisión visual final: Juan 2 páginas, Sofía 2, Vanessa 3; sin cortes ni superposiciones.
+- ZIP extraído en carpeta nueva: demo y 36 pruebas ejecutadas de nuevo con éxito.
+- Paquete: 45 archivos, una carpeta raíz EpiRed-main; sin cachés ni binarios.
